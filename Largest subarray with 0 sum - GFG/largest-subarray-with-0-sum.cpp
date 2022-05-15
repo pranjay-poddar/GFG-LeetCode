@@ -19,13 +19,11 @@ class Solution{
             if(sum == 0){
                 mx = i+1;
             }
-            else{
             if(u.find(sum)==u.end()){
                 u[sum]=i;
             }
-            else{
+            if(u.find(sum)!=u.end()){
                 mx = max(mx,i-u[sum]);
-            }
             }
         }
         return mx;
